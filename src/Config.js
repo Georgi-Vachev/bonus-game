@@ -90,7 +90,7 @@ export default {
       fontSize: 48
     },
     tween: {
-      duration: 2,
+      duration: 1.5,
       x: 1.2,
       y: 1.2,
       yoyo: true,

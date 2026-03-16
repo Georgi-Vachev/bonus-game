@@ -65,7 +65,9 @@ export class Game extends Container {
 
     case STATES.OPENING:
       if (this.openedChests >= this.config.game.chestCount) {
-        this.setState(STATES.IDLE);
+        this.mainScreen.animateTotalWin(() => {
+          this.setState(STATES.IDLE);
+        });
       } else {
         this.mainScreen.enableChests(true);
       }
@@ -108,13 +110,7 @@ export class Game extends Container {
         return;
       }
 
-      if (this.openedChests >= this.config.game.chestCount) {
-        this.mainScreen.animateTotalWin(() => {
-          this.setState(STATES.IDLE);
-        });
-      } else {
-        this.setState(STATES.OPENING);
-      }
+      this.setState(STATES.OPENING);
     });
   }
 }

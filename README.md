@@ -1,8 +1,8 @@
-# JS Chest Game
+# JS Bonus Chest Game
 
 A simple chest-opening game built with **Pixi.js** and **GSAP**.  
 
-Tested on **Node.js v20**.
+Tested on **Node.js v20.20.1
 
 ## Features
 
